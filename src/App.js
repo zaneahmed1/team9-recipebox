@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Home';
-import RecipeList from './RecipeList';
-import AddRecipe from './AddRecipe';
+import Home from './Home/Home';
+import RecipeList from './RecipeList/RecipeList';
+import AddRecipe from './AddRecipe/AddRecipe';
 
 function App() {
   return (
