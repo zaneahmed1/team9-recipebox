@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 
+
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);
-
   useEffect(() => {
     fetch('/public/data.json')
       .then(response => {
@@ -19,17 +19,30 @@ function RecipeList() {
   return (
     <div className="RecipeList">
       <h2>Recipe List</h2>
-      {recipes.length > 0 ? (
+      {recipes.length === 0 ? (
+        <p>No recipes available.</p>
+      ) : (
         <ul>
-          {recipes.map(recipe => (
+          {recipes.map((recipe) => (
             <li key={recipe.id}>
               <h3>{recipe.name}</h3>
-              <p>{recipe.ingredients}</p>
+              {recipe.photoUrl && (
+                <img
+                src={recipe.photoUrl}
+                alt={recipe.name}
+                width="200"/>
+              )}
+              <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
+              <p>
+                <strong>Dietary Preferences:</strong> 
+                {recipe.vegan && ' Vegan'}
+                {recipe.vegetarian && ' Vegetarian'}
+                {recipe.glutenFree && ' Gluten-Free'}
+                {!recipe.vegan && !recipe.vegetarian && !recipe.glutenFree && ' None'}
+              </p>
             </li>
           ))}
         </ul>
-      ) : (
-        <p>No recipes available.</p>
       )}
     </div>
   );

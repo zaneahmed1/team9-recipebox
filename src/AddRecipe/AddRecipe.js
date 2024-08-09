@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddRecipe.css';
 
 function AddRecipe() {
   const [name, setName] = useState('');
@@ -6,20 +7,20 @@ function AddRecipe() {
   const [vegan, setVegan] = useState(false);
   const [vegetarian, setVegetarian] = useState(false);
   const [glutenFree, setGlutenFree] = useState(false);
-  const [photo, setPhoto] = useState(null);
+  const [photoUrl, setPhotoUrl] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newRecipe = {
-      name,
-      ingredients,
-      vegan,
-      vegetarian,
-      glutenFree,
-      photo
-    };
+    // const newRecipe = {
+    //   name,
+    //   ingredients,
+    //   vegan,
+    //   vegetarian,
+    //   glutenFree,
+    //   photoUrl
+    // };
 
 
     setName('');
@@ -27,12 +28,8 @@ function AddRecipe() {
     setVegan(false);
     setVegetarian(false);
     setGlutenFree(false);
-    setPhoto(null);
+    setPhotoUrl(null);
     setMessage('Recipe added!');
-  };
-
-  const handlePhotoChange = (e) => {
-    setPhoto(e.target.files[0]);
   };
 
   return (
@@ -87,12 +84,13 @@ function AddRecipe() {
           />
         </div>
         <div>
-          <label htmlFor="photo">Add Photo:</label>
+          <label htmlFor="photoUrl">Image URL:</label>
           <input
-            id="photo"
-            type="file"
-            accept="image/*"
-            onChange={handlePhotoChange}
+            id="photoUrl"
+            type="text"
+            value={photoUrl}
+            onChange={(e) => setPhotoUrl(e.target.value)}
+            placeholder="Enter image URL"
           />
         </div>
         <button type="submit">Add Recipe</button>

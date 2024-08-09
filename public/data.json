@@ -1,0 +1,42 @@
+[
+    {
+    "name": "Quinoa Salad with Avocado and Black Beans",
+    "ingredients": "Quinoa, Avocado, Black Beans, Corn, Cherry Tomatoes, Red Onion, Cilantro, Lime Juice, Olive Oil, Salt, Pepper",
+    "vegan": true,
+    "vegetarian": true,
+    "glutenfree": true,
+    "photourl": ""
+    },
+    {
+    "name": "Vegan Chickpea Curry",
+    "ingredients": "Chickpeas, Coconut Milk, Onion, Garlic, Ginger, Tomatoes, Spinach, Garam Masala, Turmeric, Cumin, Coriander, Salt, Pepper",
+    "vegan": true,
+    "vegetarian": true,
+    "glutenfree": true,
+    "photourl": "https://example.com/chickpea-curry.jpg"
+    },
+    {
+    "name": "Gluten-Free Veggie Pizza",
+    "ingredients": "Gluten-Free Pizza Dough, Tomato Sauce, Mozzarella Cheese, Bell Peppers, Mushrooms, Olives, Spinach, Oregano, Basil, Olive Oil",
+    "vegan": false,
+    "vegetarian": true,
+    "glutenfree": true,
+    "photourl": "https://example.com/gluten-free-pizza.jpg"
+    },
+    {
+    "name": "Vegan Chocolate Mousse",
+    "ingredients": "Silken Tofu, Dark Chocolate, Maple Syrup, Vanilla Extract, Coconut Cream, Raspberries",
+    "vegan": true,
+    "vegetarian": true,
+    "glutenfree": true,
+    "photourl": "https://example.com/vegan-chocolate-mousse.jpg"
+    },
+    {
+    "name": "Vegetarian Stuffed Peppers",
+    "ingredients": "Bell Peppers, Quinoa, Black Beans, Corn, Cheddar Cheese, Tomato Sauce, Onion, Garlic, Cumin, Chili Powder, Salt, Pepper",
+    "vegan": false,
+    "vegetarian": true,
+    "glutenfree": true,
+    "photourl": "https://example.com/stuffed-peppers.jpg"
+    }
+    ]
